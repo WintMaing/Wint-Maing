@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wint Maing - Projects</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for Gradient Text */
+        .gradient-text {
+            /* Define the gradient */
+            background: linear-gradient(90deg, #4F46E5, #9333EA, #EC4899);
+            /* Clip the background to the text (Webkit/Blink browsers) */
+            -webkit-background-clip: text;
+            /* Make the text transparent so the background shows through */
+            -webkit-text-fill-color: transparent;
+            /* Fallback for other browsers */
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Subtle 3D tilt on hover */
+        .project-card {
+            transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+        .project-card:hover {
+            transform: rotateX(1deg) rotateY(-1deg) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Wint Maing</a>
+            <div>
+                <a href="index.html" class="text-lg mx-3 hover:text-indigo-400 transition duration-300">Home</a>
+                <a href="projects.html" class="text-lg mx-3 hover:text-indigo-400 transition duration-300">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="projects-hero" class="pt-10 pb-16 text-center">
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter mb-4">
+                <span class="gradient-text">Portfolio of Work</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto">
+                A collection of academic and personal projects demonstrating my technical skills and problem-solving abilities.
+            </p>
+        </section>
+
+        <section id="projects" class="py-10">
+            <div class="max-w-7xl mx-auto grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-indigo-600">
+                    <h3 class="text-2xl font-bold mb-3 text-indigo-400">1. 🔐 Chatbot for Cybersecurity</h3>
+                    <p class="text-gray-400 mb-4">BEC Awareness</p>
+                    <p class="text-gray-300 mb-6">
+                        A chatbot created for a cybersecurity competition to raise awareness about **Business Email Compromise (BEC)**. Inspired by research from global security reports, it helps users understand real attack patterns and prevention tips.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-indigo-900/50 text-indigo-300 text-sm rounded-full">Cybersecurity</span>
+                        <span class="px-3 py-1 bg-indigo-900/50 text-indigo-300 text-sm rounded-full">Research-Driven</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-purple-600">
+                    <h3 class="text-2xl font-bold mb-3 text-purple-400">2. 📊 Rental Management System</h3>
+                    <p class="text-gray-400 mb-4">Desktop Application</p>
+                    <p class="text-gray-300 mb-6">
+                        A desktop application designed to manage customers, rental items, and transactions. Includes features like robust **CRUD operations**, a user-friendly UI, and DataGridView-based data handling.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-purple-900/50 text-purple-300 text-sm rounded-full">SQL Server</span>
+                        <span class="px-3 py-1 bg-purple-900/50 text-purple-300 text-sm rounded-full">Desktop UI</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-pink-600">
+                    <h3 class="text-2xl font-bold mb-3 text-pink-400">3. 📝 Student Marks Management System</h3>
+                    <p class="text-gray-400 mb-4">ASP.NET Web System</p>
+                    <p class="text-gray-300 mb-6">
+                        A role-based web application for managing student marks with auto-calculation and validation features. Designed to reduce manual errors and streamline academic record keeping.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-pink-900/50 text-pink-300 text-sm rounded-full">ASP.NET</span>
+                        <span class="px-3 py-1 bg-pink-900/50 text-pink-300 text-sm rounded-full">Validation</span>
+                    </div>
+                </div>
+
+                <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-green-600">
+                    <h3 class="text-2xl font-bold mb-3 text-green-400">4. 🌍 Travelio.com – Travel Website</h3>
+                    <p class="text-gray-400 mb-4">Third Year Project (Web Frontend)</p>
+                    <p class="text-gray-300 mb-6">
+                        Travelio.com allows users to explore destinations, view travel packages, check prices, and contact travel services easily. Focused heavily on **Clean and modern UI**, responsive design, and simple navigation.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-green-900/50 text-green-300 text-sm rounded-full">Frontend Design</span>
+                        <span class="px-3 py-1 bg-green-900/50 text-green-300 text-sm rounded-full">Responsive UI</span>
+                    </div>
+                </div>
+
+
+                <div class="project-card bg-gray-800 p-8 rounded-xl shadow-2xl border-t-4 border-red-600">
+                    <h3 class="text-2xl font-bold mb-3 text-red-400">5. 📱 Mobile App Mini Projects</h3>
+                    <p class="text-gray-400 mb-4">React Native + Expo</p>
+                    <p class="text-gray-300 mb-6">
+                        A series of small mobile applications built to practice UI design, navigation, API usage, and **component-based development**. Excellent for foundational practice.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-red-900/50 text-red-300 text-sm rounded-full">React Native</span>
+                        <span class="px-3 py-1 bg-red-900/50 text-red-300 text-sm rounded-full">API Practice</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="py-20 text-center">
+             <h2 class="text-3xl font-bold mb-4 text-gray-200">Ready to hire a motivated intern?</h2>
+             <a href="index.html#contact" class="inline-block px-8 py-3 bg-indigo-600 text-white font-semibold rounded-lg shadow-lg hover:bg-indigo-700 transition duration-300 transform hover:scale-105">
+                View Contact Info
+            </a>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800/50 py-6 mt-12 text-center text-gray-500 border-t border-gray-800">
+        <p>&copy; 2025 Wint Maing. Built with HTML & Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>

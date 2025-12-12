@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wint Maing - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom CSS for Gradient Text */
+        .gradient-text {
+            /* Define the gradient */
+            background: linear-gradient(90deg, #4F46E5, #9333EA, #EC4899);
+            /* Clip the background to the text (Webkit/Blink browsers) */
+            -webkit-background-clip: text;
+            /* Make the text transparent so the background shows through */
+            -webkit-text-fill-color: transparent;
+            /* Fallback for other browsers */
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Keyframes for subtle hover effect */
+        @keyframes pulse-once {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+            100% { transform: scale(1); }
+        }
+
+        .hover-pulse:hover {
+            animation: pulse-once 0.3s ease-in-out;
+        }
+
+        /* --- CODE SCREEN ANIMATION STYLES --- */
+        @keyframes scroll-code {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-50%); /* Scroll up halfway */ }
+        }
+
+        .code-animation-container {
+            /* Use a dark, slightly transparent background */
+            background: rgba(17, 24, 39, 0.7); /* gray-900 with transparency */
+            border: 1px solid rgba(75, 85, 99, 0.5); /* gray-600 border */
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 400px; /* Adjust size as needed */
+            height: 300px;
+            transform: translate(30%, -50%) rotate(5deg); /* Offset and tilt */
+            opacity: 0.15;
+            filter: blur(2px);
+            pointer-events: none;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(79, 70, 229, 0.5); /* Indigo glow */
+        }
+
+        .code-lines {
+            white-space: pre;
+            font-family: monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            color: #6366f1; /* Indigo color for code */
+            animation: scroll-code 25s linear infinite alternate; /* Slower, continuous scroll */
+            padding-top: 100%; /* Start below the viewport */
+        }
+        /* --- END CODE SCREEN ANIMATION STYLES --- */
+    </style>
+</head>
+
+<body class="bg-gray-900 text-gray-200 font-sans">
+
+    <header class="sticky top-0 z-50 bg-gray-900/90 backdrop-blur-sm shadow-lg">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold gradient-text">Wint Maing</a>
+            <div>
+                <a href="index.html" class="text-lg mx-3 hover:text-indigo-400 transition duration-300">Home</a>
+                <a href="projects.html" class="text-lg mx-3 hover:text-indigo-400 transition duration-300">Projects</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+
+        <section id="hero" class="pt-20 pb-28 min-h-screen flex items-center relative overflow-hidden">
+            <div class="code-animation-container hidden lg:block">
+                <div class="code-lines">
+                    <span style="color:#f87171;">function </span><span style="color:#34d399;">createPossibility</span>(idea) {
+  <span style="color:#d946ef;">const</span> solution = <span style="color:#facc15;">new</span> <span style="color:#38bdf8;">CodeSolution</span>(idea);
+  solution.<span style="color:#10b981;">applyLogic</span>();
+  <span style="color:#facc15;">if</span> (solution.<span style="color:#10b981;">isFeasible</span>) {
+    <span style="color:#d946ef;">return</span> solution.<span style="color:#3b82f6;">build</span>();
+  } <span style="color:#facc15;">else</span> {
+    <span style="color:#d946ef;">throw new Error</span>('Debugging required');
+  }
+}
+
+<span style="color:#f87171;">const</span> projects = [
+  <span style="color:#fb923c;">'Chatbot', </span> <span style="color:#fb923c;">'RentalSystem',</span>
+  <span style="color:#fb923c;">'Travelio', </span> <span style="color:#fb923c;">'MobileApps'</span>
+];
+
+<span style="color:#34d399;">projects</span>.<span style="color:#facc15;">forEach</span>(project => {
+  <span style="color:#d946ef;">console</span>.<span style="color:#ef4444;">log</span>(`Building ${project}...`);
+  <span style="color:#38bdf8;">createPossibility</span>(project);
+});
+
+<span style="color:#f87171;">class </span><span style="color:#34d399;">Developer</span> {
+  <span style="color:#38bdf8;">constructor</span>(name) {
+    <span style="color:#d946ef;">this</span>.name = name;
+  }
+  <span style="color:#3b82f6;">solve</span>(problem) {
+    <span style="color:#d946ef;">return </span>`Solving ${problem} with logic...`;
+  }
+}
+                    <span style="color:#f87171;">function </span><span style="color:#34d399;">createPossibility</span>(idea) {
+  <span style="color:#d946ef;">const</span> solution = <span style="color:#facc15;">new</span> <span style="color:#38bdf8;">CodeSolution</span>(idea);
+  solution.<span style="color:#10b981;">applyLogic</span>();
+  <span style="color:#facc15;">if</span> (solution.<span style="color:#10b981;">isFeasible</span>) {
+    <span style="color:#d946ef;">return</span> solution.<span style="color:#3b82f6;">build</span>();
+  } <span style="color:#facc15;">else</span> {
+    <span style="color:#d946ef;">throw new Error</span>('Debugging required');
+  }
+}
+
+<span style="color:#f87171;">const</span> projects = [
+  <span style="color:#fb923c;">'Chatbot', </span> <span style="color:#fb923c;">'RentalSystem',</span>
+  <span style="color:#fb923c;">'Travelio', </span> <span style="color:#fb923c;">'MobileApps'</span>
+];
+
+<span style="color:#34d399;">projects</span>.<span style="color:#facc15;">forEach</span>(project => {
+  <span style="color:#d946ef;">console</span>.<span style="color:#ef4444;">log</span>(`Building ${project}...`);
+  <span style="color:#38bdf8;">createPossibility</span>(project);
+});
+
+<span style="color:#f87171;">class </span><span style="color:#34d399;">Developer</span> {
+  <span style="color:#38bdf8;">constructor</span>(name) {
+    <span style="color:#d946ef;">this</span>.name = name;
+  }
+  <span style="color:#3b82f6;">solve</span>(problem) {
+    <span style="color:#d946ef;">return </span>`Solving ${problem} with logic...`;
+  }
+}
+                </div>
+            </div>
+            
+            <div class="max-w-6xl mx-auto flex flex-col lg:flex-row items-center justify-between text-center lg:text-left relative z-10">
+                
+                <div class="lg:w-3/5">
+                    <p class="text-xl text-indigo-400 mb-4 animate-fade-in-down">Hi, I’m Wint Maing.</p>
+                    <h1 class="text-6xl md:text-7xl font-extrabold tracking-tighter mb-6 leading-tight animate-fade-in">
+                        <span class="gradient-text">Creating useful solutions</span>
+                        <br>
+                        through code.
+                    </h1>
+                    <p class="text-xl md:text-2xl text-gray-400 max-w-xl mb-8 animate-fade-in-up">
+                        Final-year Computer Science student at Computer University (Taungoo). I enjoy building mobile apps, exploring new technologies, and creating useful solutions through code.
+                    </p>
+                    
+                    <blockquote class="text-lg italic text-gray-500 border-l-4 border-indigo-500 pl-4 max-w-xl mt-8 animate-fade-in">
+                        “Code is not just about solving problems — it’s about creating possibilities.”
+                    </blockquote>
+                </div>
+
+                <div class="lg:w-2/5 mt-12 lg:mt-0 flex justify-center lg:justify-end">
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-gray-800 p-1 
+                                border-4 border-indigo-500/50 shadow-2xl 
+                                transform hover:scale-105 transition duration-500 
+                                hover:shadow-indigo-500/70">
+                        <img 
+                            src="./image/as.jpg" 
+                            alt="Wint Maing - Developer Photo" 
+                            class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition duration-500"
+                        >
+                        </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <div class="h-px bg-gray-800 my-12"></div>
+
+        <section id="about" class="py-20">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">💡 About Me</h2>
+            <div class="max-w-4xl mx-auto bg-gray-800 p-8 rounded-xl shadow-2xl transition duration-500 hover:shadow-indigo-500/30">
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    I’m a **passionate and curious developer** who loves turning ideas into real applications. My journey in Computer Science has taught me to think logically, work collaboratively, and keep improving myself every day.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed mb-4">
+                    I’m especially interested in mobile app development, web technologies, and software engineering. I enjoy experimenting with new tools, learning from real-world projects, and challenging myself to grow.
+                </p>
+                 <p class="text-md text-gray-400 leading-relaxed italic">
+                    When I’m not coding, I like to watch tech videos, learn new concepts, and explore creative ideas for future projects.
+                </p>
+            </div>
+        </section>
+        
+        <div class="h-px bg-gray-800 my-12"></div>
+
+        <section id="skills" class="py-20">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">⚙️ Skills & Tech Stack</h2>
+            
+            <div class="max-w-6xl mx-auto grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl border-t-4 border-indigo-500 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-indigo-400">Mobile Development</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>**React Native**</li>
+                        <li>Expo</li>
+                        <li>UI Design & Navigation</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl border-t-4 border-purple-500 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-purple-400">Web Development</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>HTML, CSS, JavaScript</li>
+                        <li>ASP.NET</li>
+                        <li>Responsive UI & Forms</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl border-t-4 border-pink-500 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-pink-400">Backend & Programming</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Python, Node.js (beginner)</li>
+                        <li>OOP, **SOLID principles**</li>
+                        <li>MySQL, SQL Server</li>
+                    </ul>
+                </div>
+
+                <div class="p-6 bg-gray-800 rounded-xl shadow-xl border-t-4 border-red-500 transform hover:scale-105 transition duration-300">
+                    <h3 class="text-2xl font-semibold mb-4 text-red-400">Other Skills</h3>
+                    <ul class="space-y-2 text-gray-300">
+                        <li>Git & Version Control</li>
+                        <li>Cybersecurity fundamentals</li>
+                        <li>**Problem-solving** & Debugging</li>
+                        <li>Team Collaboration</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="h-px bg-gray-800 my-12"></div>
+
+        <section id="experience" class="py-20">
+            <h2 class="text-4xl font-bold mb-12 text-center gradient-text">🚀 Experience & Focus</h2>
+            <div class="max-w-4xl mx-auto space-y-8">
+                
+                <div class="p-6 bg-gray-800 rounded-xl shadow-2xl transition duration-500 hover:shadow-indigo-500/30 border-l-4 border-indigo-500">
+                    <h3 class="text-2xl font-semibold text-indigo-400 mb-3">Academic Projects & Teamwork</h3>
+                    <p class="text-gray-300 leading-relaxed mb-4">
+                        Although I have not started my internship yet, I have strong experience from university projects. I’ve worked in teams, handled responsibilities, and built applications from planning to testing.
+                    </p>
+                    <p class="font-semibold text-gray-400 mb-2">I always prioritize:</p>
+                    <ul class="list-disc list-inside text-gray-300 ml-4">
+                        <li>Writing clean and readable code</li>
+                        <li>Understanding user needs</li>
+                        <li>Improving my own skills</li>
+                        <li>Finishing tasks on time</li>
+                    </ul>
+                    <p class="text-gray-300 mt-4 font-medium">
+                        I’m eager to apply my knowledge in a real-world company environment.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <div class="h-px bg-gray-800 my-12"></div>
+
+        <section id="contact" class="py-20 text-center">
+            <h2 class="text-4xl font-bold mb-6 gradient-text">📞 Let's Connect</h2>
+            <p class="text-xl text-gray-400 max-w-3xl mx-auto mb-10">
+                I’m currently looking for an internship where I can learn, contribute, and grow as a developer. If you’re searching for a committed and motivated intern, I’d be happy to connect!
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-6">
+                <a href="tel:+959XXXXXXXXX" class="contact-link group">
+                    <span class="text-lg font-semibold text-green-400 group-hover:text-green-300 transition duration-300">📞 Phone:</span> +95 9 793910307
+                </a>
+
+                <a href="mailto:wintmaing4@gmail.com" class="contact-link group">
+                    <span class="text-lg font-semibold text-indigo-400 group-hover:text-indigo-300 transition duration-300">📧 Email:</span> wintmaing4@gmail.com
+                </a>
+                
+                <a href="https://github.com/WintMaing" target="_blank" class="contact-link group">
+                    <span class="text-lg font-semibold text-purple-400 group-hover:text-purple-300 transition duration-300">🐙 GitHub:</span> github.com/WintMaing
+                </a>
+                
+                <a href="https://www.linkedin.com/in/blu-sea-4137192a5/" target="_blank" class="contact-link group">
+                    <span class="text-lg font-semibold text-pink-400 group-hover:text-pink-300 transition duration-300">🔗 LinkedIn:</span> /blu-sea-4137192a5
+                </a>
+                
+                <a href="https://www.facebook.com/blu.sea.5011" target="_blank" class="contact-link group">
+                    <span class="text-lg font-semibold text-blue-400 group-hover:text-blue-300 transition duration-300">👤 Facebook:</span> /blu.sea.5011
+                </a>
+            </div>
+
+            <style>
+                .contact-link {
+                    @apply p-4 bg-gray-800 rounded-lg shadow-xl hover:shadow-2xl transition duration-300 transform hover:translate-y-[-2px] text-gray-300;
+                }
+            </style>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-800/50 py-6 mt-12 text-center text-gray-500 border-t border-gray-800">
+        <p>&copy; 2025 Wint Maing. Built with HTML & Tailwind CSS.</p>
+    </footer>
+    
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              keyframes: {
+                'fade-in-down': {
+                    '0%': { opacity: '0', transform: 'translateY(-10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                'fade-in-up': {
+                    '0%': { opacity: '0', transform: 'translateY(10px)' },
+                    '100%': { opacity: '1', transform: 'translateY(0)' },
+                },
+                'fade-in': {
+                    '0%': { opacity: '0' },
+                    '100%': { opacity: '1' },
+                }
+              },
+              animation: {
+                'fade-in-down': 'fade-in-down 0.6s ease-out both',
+                'fade-in-up': 'fade-in-up 0.6s ease-out 0.2s both', /* Delayed start */
+                'fade-in': 'fade-in 0.8s ease-out 0.4s both',
+              }
+            }
+          }
+        }
+    </script>
+</body>
+</html>
